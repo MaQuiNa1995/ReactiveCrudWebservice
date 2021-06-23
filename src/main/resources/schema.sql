@@ -1,0 +1,1 @@
+ create table ARMA(ID bigint AUTO_INCREMENT not null,ELEMENTO integer,ELEMENTO_ACTIVADO boolean,NOMBRE varchar(255),TIPO varchar(255),primary key (ID));

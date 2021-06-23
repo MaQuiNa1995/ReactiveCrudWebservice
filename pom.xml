@@ -4,10 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>maquina1995</groupId>
-	<artifactId>webservice</artifactId>
-	<version>2.0.0</version>
+	<artifactId>webservice.reactive</artifactId>
+	<version>1.0.1</version>
 
-	<name>webservice </name>
+	<name>Webservice Reactivo</name>
 	<description>Proyecto para la muestra de las diferencias entre un webservice reactivos de nivel 1 y 2</description>
 
 	<parent>
@@ -18,7 +18,8 @@
 
 	<properties>
 		<swagger.version>3.0.0</swagger.version>
-		<mapstruct.version>1.4.0.Final</mapstruct.version>
+		<mapstruct.version>1.4.2.Final</mapstruct.version>
+		<hibernate.reactive.version>1.0.0.CR7</hibernate.reactive.version>
 	</properties>
 
 	<dependencies>
@@ -37,13 +38,12 @@
 		<dependency>
 			<groupId>org.hibernate.reactive</groupId>
 			<artifactId>hibernate-reactive-core</artifactId>
-			<version>1.0.0.CR7</version>
+			<version>${hibernate.reactive.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>io.r2dbc</groupId>
 			<artifactId>r2dbc-h2</artifactId>
 		</dependency>
-		<!-- Mapstruct -->
 		<dependency>
 			<groupId>org.mapstruct</groupId>
 			<artifactId>mapstruct</artifactId>
@@ -55,16 +55,10 @@
 			<version>${swagger.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-engine</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
 
 	<build>
@@ -73,8 +67,6 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
 					<annotationProcessorPaths>
 						<path>
 							<groupId>org.projectlombok</groupId>

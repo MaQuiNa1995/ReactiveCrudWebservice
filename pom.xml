@@ -2,27 +2,23 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
 	<groupId>maquina1995</groupId>
 	<artifactId>webservice.reactive</artifactId>
-	<version>1.0.1</version>
-
+	<version>1.0.0</version>
 	<name>Webservice Reactivo</name>
-	<description>Proyecto para la muestra de las diferencias entre un webservice reactivos de nivel 1 y 2</description>
-
+	<description>Webservice reactivo con spring web flux</description>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.5.1</version>
+		<version>[3,4)</version>
 	</parent>
-
 	<properties>
 		<swagger.version>3.0.0</swagger.version>
-		<mapstruct.version>1.4.2.Final</mapstruct.version>
-		<hibernate.reactive.version>1.0.0.CR7</hibernate.reactive.version>
+		<mapstruct.version>1.5.3.Final</mapstruct.version>
+		<hibernate.reactive.version>1.1.9.Final</hibernate.reactive.version>
 	</properties>
-
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -60,7 +56,6 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -94,5 +89,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>

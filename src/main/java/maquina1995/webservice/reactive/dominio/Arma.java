@@ -23,18 +23,14 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
-public class Arma implements Persistible<Long>, Serializable {
+public class Arma implements Serializable {
 
 	@Id
-	@GeneratedValue(generator = "sequence",
-	        strategy = GenerationType.SEQUENCE)
-	@SequenceGenerator(name = "sequence",
-	        allocationSize = 1)
+	@GeneratedValue(generator = "sequence", strategy = GenerationType.SEQUENCE)
+	@SequenceGenerator(name = "sequence", allocationSize = 1)
 	@EqualsAndHashCode.Exclude
 	private Long id;
 	private String nombre;
 	private String tipo;
-	private Integer elemento;
-	private Boolean elementoActivado;
 
 }

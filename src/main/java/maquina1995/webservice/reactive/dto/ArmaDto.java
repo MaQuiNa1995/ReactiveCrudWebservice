@@ -15,10 +15,8 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
-public class ArmaDto implements PersistibleDto<Long>, Serializable {
+public class ArmaDto implements Serializable {
 
-	@EqualsAndHashCode.Exclude
-	private Long id;
 	private String nombre;
 	private String tipo;
 	private Integer elemento;

@@ -5,7 +5,7 @@ import org.mapstruct.Mapper;
 import maquina1995.webservice.reactive.dominio.Arma;
 import maquina1995.webservice.reactive.dto.ArmaDto;
 
-@Mapper(componentModel = "spring")
+@Mapper
 public interface ArmaMapper extends AbstractMapper<Arma, ArmaDto> {
 
 }
